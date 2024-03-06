@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "../Assets/images/upialogo.jpeg";
-
+import logo from "../Assets/images/UPIALogo-01.svg";
 
 const navigation = {
   solutions: [

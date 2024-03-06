@@ -4,21 +4,21 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/outline";
 import { PlusIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import logo from "../Assets/images/upialogo.jpeg";
+import logo from "../Assets/images/UPIALogo-01.svg";
 import Link from "next/link";
 
 export default function Navigation() {
   return (
     <>
-      <nav className="bg-white border-gray-200 white:bg-gray-900 fixed w-full z-10 ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-white border-gray-200 white:bg-gray-900 fixed w-full z-10  ">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
           <a className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image
               src={logo}
               //   class="h-8"
               alt="Logo"
-              width={100}
-              height={50}
+              width={150}
+              height={100}
             />
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

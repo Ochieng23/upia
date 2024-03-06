@@ -54,7 +54,7 @@ export default function Example() {
         >
           {people.map((person, index) => (
             <li
-              className={`border border-green-300 rounded-lg shadow dark:bg-white-800 dark:border-white-700 p-4 ${
+              className={`border border-gray-300 rounded-lg shadow dark:bg-white-800 dark:border-white-700 p-4 ${
                 index === currentIndex ? "active-slide" : ""
               }`}
               key={person.name}
