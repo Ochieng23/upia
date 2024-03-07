@@ -13,14 +13,20 @@ function BlogContent({ posts }) {
     return truncatedText + "...";
   }
 
-  console.log(posts);
+  
   return (
     <div className="bg-gray-200 py-20 px-10 flex-col gap-10  ">
       <span className="text-black font-extrabold text-2xl">Trending Posts</span>
       {posts &&
         Array.isArray(posts) &&
         posts.map((post) => (
-          <Link href="/" key={post._id}>
+          <Link
+            href={{
+              pathname: `/post/${post && post.slug}`, // Add null check for post.slug
+              query: { slug: post && post.slug }, // Add null check for post.slug
+            }}
+            key={post._id}
+          >
             <div className="flex flex-col md:flex-row gap-10   mt-2  bg-white rounded-md rounded-tr-md rounded-br-md hover:shadow-md duration-200">
               <div className="w-full md:w-3/5 group overflow-hidden rounded-tl-md rounded-bl-md relative">
                 <Image

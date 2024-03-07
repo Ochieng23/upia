@@ -3,20 +3,20 @@ import { client } from "../../lib/createClient"; // Assuming `client` is exporte
 import React from "react";
 import BlogContent from "../components/blogContent";
 
-const query = groq`*[_type == 'post']{
+const query = groq`*[_type == 'post'] {
   _id,
   _createdAt,
   title,
   description,
-  "mainImage": mainImage.asset->url, // Accessing the URL of the mainImage asset
-  body->,
+  "mainImage": mainImage.asset->url,
+  body,
   author-> {
     ..., // Include all fields of the author
-    "image": image.asset->url // Accessing the URL of the author's image asset
+    "image": image.asset->url
   },
+  "slug": slug.current, // Accessing the current property of the slug field
   categories[]->
 } | order(_createdAt desc)
-
 `;
 
 export default async function Posts() {
