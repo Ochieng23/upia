@@ -31,7 +31,7 @@ export default async function Posts() {
         <main>
           <h2 className="text-red-200">UPIA</h2>
           <BlogContent posts={posts} />
-          {/* Render your posts here */}
+         
         </main>
       </div>
     );
