@@ -18,7 +18,7 @@ export const generateStaticParams = async () => {
   const slugs = await client.fetch(query);
   const slugRoutes = slugs.map((slug) => slug?.slug.current);
   return slugRoutes.map((slug) => ({
-    params: { slug }, // Return the slug directly within the params object
+    params: { slug },
   }));
 };
 
@@ -43,17 +43,21 @@ async function SlugPage({ params: { slug } }) {
   const post = await client.fetch(query, { slug });
   console.log(post);
   return (
-    <div className="mb-10 bg-gray-300   min-h-screen">
-      <div className="flex items-center mb-10">
-        <div className="w-full md:w-2/3">
+    <div className="mb-10 bg-white   min-h-screen">
+      <div className="flex items-center   mb-10">
+        <div className="relative w-full md:w-2/3">
           <Image
             src={post.mainImage}
             width={500}
             height={500}
             alt="main image"
-            className="object-cover w-full"
+            className="object-cover w-full opacity-70"
           />
+          <div className="absolute  top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+            <h1 className="text-black text-4xl font-bold">{post.title}</h1>
+          </div>
         </div>
+
         <div className="w-1/3 hidden md:inline-flex flex-col items-center gap-5 px-4">
           <Image
             src={post.author.image}
@@ -98,7 +102,7 @@ async function SlugPage({ params: { slug } }) {
               <FaInstagram />
             </Link>
             <Link
-              href={"https://www.youtube.com/channel/UChkOsij0dhgft0GhHRauOAA"}
+               href={"https://www.youtube.com/channel/UChkOsij0dhgft0GhHRauOAA"}
               target="blank"
               className="w-10 h-10 bg-blue-500 text-white text-xl rounded-full flex items-center justify-center hover:bg-[#5442ae] duration-200"
             >
@@ -107,7 +111,7 @@ async function SlugPage({ params: { slug } }) {
           </div>
         </div>
       </div>
-      <div className="bg-yellow-600">
+      <div className="bg-gray-600">
         <PortableText value={post.body} components={RichText} />
       </div>
     </div>

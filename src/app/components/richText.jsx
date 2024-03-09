@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,8 +9,8 @@ export const RichText = {
           <Image
             src={value}
             alt="Post image"
-            width={700}
-            height={700}
+            width={500}
+            height={500}
             className="object-contain py-6"
           />
         </div>
@@ -23,9 +22,7 @@ export const RichText = {
       <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>
     ),
   },
-  number: ({ children }) => (
-    <ol className="mt-lg list-decimal">{children}</ol>
-  ),
+  number: ({ children }) => <ol className="mt-lg list-decimal">{children}</ol>,
   block: {
     h1: ({ children }) => (
       <h1 className="text-4xl py-10 font-bold">{children}</h1>
@@ -40,7 +37,7 @@ export const RichText = {
       <h4 className="text-2xl py-10 font-bold">{children}</h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-blue-600 border-l-4 pl-5 py-5 my-5">
+      <blockquote className="border-l-blue-600 border-l-4 pl-5 py-5 my-5 ">
         {children}
       </blockquote>
     ),

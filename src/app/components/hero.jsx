@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../Assets/images/hero.jpg";
+import useDimensions from 'react-cool-dimensions';
 import Image from "next/image";
 function Hero() {
   return (
@@ -9,16 +10,17 @@ function Hero() {
         <Image
           src={hero}
           alt="Hero Image"
-          layout="responsive"
-          objectFit="cover"
-          objectPosition="center"
-          className="opacity-65"
+          
+          fill
+          className="opacity-60 object-cover"
         />
         {/* Overlay text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center pt-20">
-          <div className="bg-green-500 bg-opacity-75 p-2 rounded-lg">
+          <div className="bg-white bg-opacity-75 p-2 rounded-lg">
             <h3 className="text-red-600 text-3xl font-extrabold  mb-2">
-              United Party of Independent Alliance (UPIA)
+              <span className="text-black">United</span> Party of{" "}
+              <span className="text-green-600">Independent</span> Alliance
+              <span className="text-black">(UPIA)</span>
             </h3>
             <p className="text-black text-lg italic text-2xl font-bold">
               A new dawn

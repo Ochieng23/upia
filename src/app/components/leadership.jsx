@@ -27,7 +27,7 @@ const people = [
   },
 ];
 
-export default function Example() {
+export default function Leadership() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

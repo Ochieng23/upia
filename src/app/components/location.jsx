@@ -13,9 +13,9 @@ function Location() {
       <h1 className="text-black text-center font-extrabold text-2xl">
         Our <span className="text-red-500">Location</span>
       </h1>
-      <div className="mx-auto mt-5 my-5 max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none lg:flex lg:gap-0">
-        <div className="w-full lg:w-1/3">
-          <div className="max-w-sm ml-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className=" mx-auto mt-5 my-5 max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none lg:flex lg:gap-0">
+        <div className="w-auto lg:w-1/3 m-5 ">
+          <div className="max-w-sm md:mt-5  p-6 sm:m-5 sm:w-50 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
               UPIA PARTY HQ-Nairobi{" "}
             </h5>
@@ -65,15 +65,16 @@ function Location() {
             </a>
           </div>
         </div>
-        <div className="w-full lg:w-2/3 mr-2   ">
-          <div style={{ marginBottom: "10px" }}>
+        <div className="w-full lg:w-2/3  sm:mb-4 sm:mt-5   ">
+          <div style={{ marginBottom: "10px" }} className=" md:mt-5">
             <iframe
-              width="100%"
+              width="90%"
               height="400"
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
+              className="sm:w-50 sm: ml-5"
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Gem%20Lane,%20Mandera%20Road,%20Kileleshwa,%20Nairobi,+(UPIA%20Party%20HQ)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             >
               <a href="https://www.gps.ie/">gps devices</a>
