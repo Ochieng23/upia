@@ -4,22 +4,22 @@ import logo from "../Assets/images/UPIALogo-01.svg";
 
 const navigation = {
   solutions: [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Manifesto", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Manifesto", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
   ],
   support: [
     { name: "Party Leaders", href: "#" },
-    { name: "Members", href: "#" },
-    { name: "Donate", href: "#" },
+    { name: "Members", href: "/members" },
+    { name: "Donate", href: "/donate" },
     { name: "Register", href: "#" },
   ],
   news: [
-    { name: "Latest", href: "#" },
+    { name: "Latest", href: "/news" },
     { name: "Blog", href: "#" },
     { name: "Events", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Press", href: "/news" },
     { name: "Partners", href: "#" },
   ],
   legal: [

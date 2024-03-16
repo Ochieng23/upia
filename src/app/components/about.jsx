@@ -4,31 +4,35 @@ import {
   LifebuoyIcon,
   NewspaperIcon,
   PhoneIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/24/outline";
 
 import vision from "../Assets/images/vision.jpg";
 import mission from "../Assets/images/mission.jpg";
 import equity from "../Assets/images/equity.jpg";
 import Image from "next/image";
 
+
 const cards = [
   {
     name: "IDEOLOGY",
     description:
-      " The party aims to establish political stability, advance economic empowerment, create social justice, and ensure equitable resource sharing for all.",
+      "The party aims to establish political stability, advance economic empowerment, create social justice, and ensure equitable resource sharing for all.",
     image: mission,
+    icon: <LifebuoyIcon className="w-6 h-6" />,
   },
   {
     name: "VISION",
     description:
-      "To have a country that is united, prosperous and sustainably developed with equal oprtunities for all kenyans to develop their potential and be free from poverty.",
+      "To have a country that is united, prosperous, and sustainably developed with equal opportunities for all Kenyans to develop their potential and be free from poverty.",
     image: vision,
+    icon: <NewspaperIcon className="w-6 h-6" />,
   },
   {
     name: "MISSION",
     description:
-      "To Identify and build capacity for all Kenyansto realize and exercise their political, social, economic and cultural rights and fundamental fredoms enshrined in the constitution.",
+      "To identify and build capacity for all Kenyans to realize and exercise their political, social, economic, and cultural rights and fundamental freedoms enshrined in the constitution.",
     image: equity,
+    icon: <LifebuoyIcon className="w-6 h-6" />,
   },
 ];
 
@@ -47,11 +51,11 @@ export default function AboutHome() {
           {cards.map((card) => (
             <div
               key={card.name}
-              className="p-4 max-w-sm bg-white-300 border border-white-200 rounded-lg shadow dark:bg-white-300 dark:border-white-700 transition-transform hover:scale-105"
+              className="p-4 max-w-sm bg-white-300 border border-white-200 rounded-lg shadow dark:bg-white-300 dark:border-white-700 "
             >
               <a href="#">
                 <Image
-                  className="rounded-t-lg"
+                  className="rounded-t-lg transition-transform hover:scale-105"
                   src={card.image}
                   alt="img"
                   width={200}
@@ -60,21 +64,8 @@ export default function AboutHome() {
               </a>
 
               <div className="text-base leading-7">
-                <h3 className="flex items-center mt-2 text-green-600 text-2xl font-bold tracking-tight  dark:text-green-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6 mr-2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                    />
-                  </svg>
+                <h3 className="flex items-center mt-2 text-green-600 text-2xl font-bold tracking-tight dark:text-green-600">
+                  <div className="mr-2">{card.icon}</div>
                   {card.name}
                 </h3>
                 <p className="mt-2 text-black">{card.description}</p>
@@ -83,6 +74,7 @@ export default function AboutHome() {
           ))}
         </div>
       </div>
+      
     </div>
   );
 }

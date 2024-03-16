@@ -78,7 +78,7 @@ export default async function Blog() {
                     <img
                       src={post.author.image}
                       alt=""
-                      className="h-10 w-10 rounded-full bg-gray-100"
+                      className="h-10 w-10 rounded-full bg-gray-100 transition-transform hover:scale-105"
                     />
                     <div className="text-sm leading-6">
                       <p className="font-semibold text-gray-900">
