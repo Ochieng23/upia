@@ -1,11 +1,6 @@
 "use client";
 import React from "react";
-import {
-  CalendarIcon,
-  CreditCardIcon,
-  UserIcon,
-  LifebuoyIcon,
-} from "@heroicons/react/outline";
+
 
 function Location() {
   return (

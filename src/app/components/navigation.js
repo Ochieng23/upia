@@ -1,4 +1,5 @@
 "use client";
+import React from 'react'
 import { useState } from "react";
 import Image from "next/image";
 import logo from "../Assets/images/UPIALogo-01.svg";
@@ -8,6 +9,8 @@ import Link from "next/link";
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  console.log(mobileMenuOpen)
+
   return (
     <>
       <nav className="bg-white border-gray-200 white:bg-gray-900 fixed w-full z-10">
@@ -16,13 +19,15 @@ export default function Navigation() {
             <Image src={logo} alt="Logo" width={100} height={100} />
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <Link
-              href="/donate"
+            <button
+              onClick={()=>{
+                console.log("Clicked");
+              }}
               type="button"
               className="flex w-full items-center cursor-pointer justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
               Donate
-            </Link>
+            </button>
             <button
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
@@ -126,10 +131,10 @@ export default function Navigation() {
 
               <li>
                 <Link
-                  href="members"
+                  href="/register"
                   className="block py-2 px-3 md:p-0 text-black rounded hover:bg-green-100 md:hover:bg-transparent hover:text-red-700 hover:underline hover:underline-maroon-500 dark:text-black dark:hover:bg-red-700 dark:hover:text-red md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  <span className="font-bold">Members</span>
+                  <span className="font-bold">Register</span>
                 </Link>
               </li>
               <li>

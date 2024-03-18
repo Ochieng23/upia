@@ -59,6 +59,7 @@ export default function AboutHome() {
                   src={card.image}
                   alt="img"
                   width={200}
+                  height={200}
                   layout="responsive"
                 />
               </a>

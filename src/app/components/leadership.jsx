@@ -181,13 +181,13 @@ export default function Leadership() {
                         r="44.899"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop offset="0" stop-color="#fd5"></stop>
-                        <stop offset=".328" stop-color="#ff543f"></stop>
-                        <stop offset=".348" stop-color="#fc5245"></stop>
-                        <stop offset=".504" stop-color="#e64771"></stop>
-                        <stop offset=".643" stop-color="#d53e91"></stop>
-                        <stop offset=".761" stop-color="#cc39a4"></stop>
-                        <stop offset=".841" stop-color="#c837ab"></stop>
+                        <stop offset="0" stopColor="#fd5"></stop>
+                        <stop offset=".328" stopColor="#ff543f"></stop>
+                        <stop offset=".348" stopColor="#fc5245"></stop>
+                        <stop offset=".504" stopColor="#e64771"></stop>
+                        <stop offset=".643" stopColor="#d53e91"></stop>
+                        <stop offset=".761" stopColor="#cc39a4"></stop>
+                        <stop offset=".841" stopColor="#c837ab"></stop>
                       </radialGradient>
                       <path
                         fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
@@ -230,8 +230,10 @@ export default function Leadership() {
         </ul>
       </div>
       <div className="flex items-center justify-center mt-5">
-        <Link
-          href="/members"
+        <button
+          onClick={()=>{
+            console.log('clicke yo')
+          }}
           type="button"
           className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 flex items-center"
         >
@@ -250,7 +252,7 @@ export default function Leadership() {
               d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
             />
           </svg>
-        </Link>
+        </button>
       </div>
     </div>
   );
